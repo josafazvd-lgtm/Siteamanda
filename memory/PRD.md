@@ -21,5 +21,6 @@ Dados: Amanda Azevedo, OAB 29.478, WhatsApp 91980324349, advamandaalvs@gmail.com
 - Admin: login JWT, abas Textos / Fotos e logo (upload) / Cores (presets + pickers) / Disposição (ordem, visibilidade, lado da foto, faixa) / Mensagens (ler, excluir, responder no WhatsApp).
 
 ## Backlog
-- P1: Trocar senha pelo painel; notificação por e-mail de nova mensagem.
+- 2026-10-07: Aviso por e-mail (Resend gerenciado pela Emergent) para advamandaalvs@gmail.com a cada envio do formulário (`backend/email_service.py`, env NOTIFY_EMAIL / EMAIL_FROM_NAME).
+- P1: Trocar senha pelo painel.
 - P2: SEO por página/blog de artigos; depoimentos reais.

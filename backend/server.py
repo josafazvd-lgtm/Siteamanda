@@ -14,10 +14,11 @@ import bcrypt
 import jwt
 import requests
 from bson import ObjectId
-from fastapi import FastAPI, APIRouter, HTTPException, Request, Response, UploadFile, File, Depends
+from fastapi import FastAPI, APIRouter, HTTPException, Request, Response, UploadFile, File, Depends, BackgroundTasks
 from motor.motor_asyncio import AsyncIOMotorClient
 from pydantic import BaseModel, BeforeValidator, ConfigDict, EmailStr, Field
 from starlette.middleware.cors import CORSMiddleware
+from email_service import notify_new_message
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -217,9 +218,10 @@ async def get_file(path: str):
 
 # ---------- messages ----------
 @api.post("/contact")
-async def contact(body: MessageIn):
+async def contact(body: MessageIn, background: BackgroundTasks):
     msg = Message(**body.model_dump())
     res = await db.messages.insert_one(msg.to_mongo())
+    background.add_task(notify_new_message, body.model_dump())
     return {"ok": True, "id": str(res.inserted_id)}
 
 
