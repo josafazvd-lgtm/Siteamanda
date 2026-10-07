@@ -1,0 +1,43 @@
+.grain { position: relative; isolation: isolate; }
+.grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.09;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.spotlight {
+    background: radial-gradient(ellipse at 72% 38%, color-mix(in srgb, var(--sky) 38%, transparent) 0%, transparent 58%);
+}
+
+.tint-sky { background: color-mix(in srgb, var(--sky) 24%, var(--paper)); }
+.tint-sky-strong { background: color-mix(in srgb, var(--sky) 55%, white); }
+.line-navy { border-color: color-mix(in srgb, var(--navy) 14%, transparent); }
+.line-white { border-color: rgba(255, 255, 255, 0.16); }
+.text-ink-soft { color: color-mix(in srgb, var(--navy) 78%, white); }
+
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee-track { animation: marquee 70s linear infinite; width: max-content; }
+
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+.spin-slow { animation: spin-slow 22s linear infinite; }
+
+.arch { border-radius: 999px 999px 18px 18px; }
+
+.btn-shine { position: relative; overflow: hidden; }
+.btn-shine::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-120%) skewX(-20deg);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+    transition: transform 0.8s ease;
+}
+.btn-shine:hover::before { transform: translateX(120%) skewX(-20deg); }
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee-track, .spin-slow { animation: none; }
+}

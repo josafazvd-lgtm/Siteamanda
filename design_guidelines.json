@@ -1,0 +1,106 @@
+{
+  "brand_identity": {
+    "name": "Dra. Amanda Azevedo - Advocacia de Família",
+    "oab": "OAB 29.478",
+    "whatsapp": "91980324349",
+    "email": "advamandaalvs@gmail.com",
+    "tagline": "Proteção jurídica humanizada e eficaz para a sua família, 100% online.",
+    "aesthetic_archetype": "Swiss High-Contrast + Old Money Legal Trust (Archetype 4 & 5 Fusion)",
+    "tone": "Acolhedor, altivo, empático, altamente profissional e resolutivo."
+  },
+  "color_system": {
+    "css_variables_driven": true,
+    "theme_tokens": {
+      "--primary-dark": "#0A192F",
+      "--primary-navy": "#1E3A8A",
+      "--primary-blue": "#2563EB",
+      "--accent-light-blue": "#38BDF8",
+      "--soft-sky": "#F0F9FF",
+      "--surface-light": "#F8FAFC",
+      "--surface-card": "#FFFFFF",
+      "--text-heading": "#0F172A",
+      "--text-body": "#334155",
+      "--text-muted": "#64748B",
+      "--border-subtle": "#E2E8F0",
+      "--gold-accent": "#D97706"
+    },
+    "customizable_via_admin": [
+      "primaryColor",
+      "secondaryColor",
+      "accentColor",
+      "backgroundColor",
+      "textColor"
+    ]
+  },
+  "typography": {
+    "heading_font": "Cormorant Garamond, serif (or Playfair Display)",
+    "body_font": "Plus Jakarta Sans, sans-serif (or DM Sans)",
+    "accent_font": "Cinzel, serif (for Monogram and OAB badge)",
+    "hierarchy": {
+      "h1_hero": "text-4xl sm:text-5xl lg:text-6xl font-serif font-semibold tracking-tight leading-tight",
+      "h2_section": "text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-slate-900 tracking-tight",
+      "h3_card": "text-xl sm:text-2xl font-serif font-medium text-slate-900",
+      "body_base": "text-base sm:text-lg text-slate-600 leading-relaxed font-sans",
+      "caption_overline": "text-xs uppercase tracking-[0.25em] font-sans font-semibold text-sky-600"
+    }
+  },
+  "layout_and_structure": {
+    "navigation": "Glassmorphic floating navbar with blur backdrop-blur-md bg-white/80 border-b border-slate-200/60 z-50 fixed top-0 w-full",
+    "hero_section": "Kinetic Hero with line-by-line reveal animation, high contrast dark-blue & light-blue badge, dual CTA (WhatsApp + Agendar Consulta), floating lawyer badge",
+    "marquee": "Slow editorial ribbon with low-contrast sky background separating Hero and About sections ('DIREITO DE FAMÍLIA • GUARDA COMPARTILHADA • DIVÓRCIO HUMANIZADO • PENSÃO ALIMENTÍCIA • PARTILHA DE BENS')",
+    "about_section": "Asymmetric Bento grid (2-column on desktop) with Dra. Amanda's portrait, credentials pill (OAB 29.478), personal statement, and key values cards",
+    "practice_areas": "Interactive grid/cards for key family law areas (Divórcio & Dissolução, Guarda & Regime de Convivência, Pensão Alimentícia, Partilha de Bens, Inventários & Partilhas, Planejamento Matrimonial)",
+    "online_process": "4-Step linear visual timeline showcasing 100% online process: 1. Atendimento via WhatsApp/Video -> 2. Envio de Documentos Digital -> 3. Análise & Estratégia -> 4. Acompanhamento do Processo sem sair de casa",
+    "testimonials_faq": "Accordion list for FAQs + sleek quote card testimonials",
+    "contact_section": "Split layout: Integrated contact form with validation + Direct WhatsApp floating widget and card details",
+    "footer": "Deep Navy background with full legal disclaimers, OAB number, fast links, and custom SVG Monogram logo"
+  },
+  "admin_dashboard_design": {
+    "style": "High-density dashboard, clean slate background (#F8FAFC), sticky sidebar/tab navigation",
+    "features": [
+      "Secured login modal/page with email & password authentication",
+      "Content Tab: Live editable text fields for Hero title, About bio, practice areas, FAQ items",
+      "Media Tab: Logo & Lawyer photo URL manager + instant preview",
+      "Theme Tab: Dynamic color pickers for Primary and Secondary CSS variables",
+      "Section Manager: Toggle visibility & drag/reorder landing page sections",
+      "Messages Inbox: Data table of contact form submissions with filter/date tags"
+    ]
+  },
+  "image_urls": {
+    "lawyer_portrait": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHxmZW1hbGUlMjBsYXd5ZXIlMjBwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdCUyMGNvbmZpZGVuY2V8ZW58MHx8fHwxNzkxMzc3NjI1fDA&ixlib=rb-4.1.0&q=85",
+    "family_support": "https://images.pexels.com/photos/6540658/pexels-photo-6540658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "family_warmth_sunset": "https://images.unsplash.com/photo-1529180979161-06b8b6d6f2be?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwyfHxmYW1pbHklMjBoYW5kcyUyMGhvbGRpbmclMjB0b2dldGhlciUyMHNpbGhvdWV0dGUlMjB3YXJtdGh8ZW58MHx8fHwxNzkxMzc3NjI4fDA&ixlib=rb-4.1.0&q=85",
+    "legal_consultation": "https://images.pexels.com/photos/7876195/pexels-photo-7876195.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  },
+  "animation_guidelines": {
+    "library": "framer-motion + lenis smooth scroll",
+    "reveals": "Staggered fade-up for section titles and cards",
+    "hero_kinetic_effect": "Masked line reveal on main header text using motion div clip-path",
+    "marquee_speed": "react-fast-marquee with duration 35s smooth infinite glide"
+  },
+  "required_test_ids": {
+    "navbar_brand": "nav-brand-logo",
+    "navbar_whatsapp_btn": "nav-whatsapp-cta",
+    "hero_whatsapp_btn": "hero-whatsapp-cta",
+    "hero_contact_btn": "hero-contact-cta",
+    "practice_area_card": "practice-area-item",
+    "contact_form_name": "contact-input-name",
+    "contact_form_email": "contact-input-email",
+    "contact_form_phone": "contact-input-phone",
+    "contact_form_message": "contact-input-message",
+    "contact_form_submit": "contact-submit-button",
+    "admin_login_email": "admin-login-email-input",
+    "admin_login_password": "admin-login-password-input",
+    "admin_login_submit": "admin-login-submit-button",
+    "admin_tab_content": "admin-tab-content-editor",
+    "admin_tab_colors": "admin-tab-color-picker",
+    "admin_tab_messages": "admin-tab-inbox-messages"
+  },
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "Ensure all theme color changes from Admin reflect immediately in realtime by updating CSS custom variables on document.documentElement.style",
+    "All copy must be in Portuguese (pt-BR) with professional legal tone tailored to Dra. Amanda Azevedo, OAB 29.478",
+    "Add full interactive mobile drawer menu with high contrast items",
+    "Implement Sonner toast notifications for contact form submission and admin actions",
+    "Every key interactive element MUST have data-testid attributes for E2E validation"
+  ]
+}
